@@ -7,48 +7,48 @@ const skillCategories = [
   {
     category: 'Frontend',
     icon: '⚡',
-    color: '#1d4ed8',
+    color: '#00d4ff',
     skills: ['React.js', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
   },
   {
     category: 'Backend',
     icon: '⚙️',
-    color: '#0e7490',
+    color: '#0891b2',
     skills: ['Go (Echo)', 'Node.js', 'REST APIs', 'Microservices', 'Docker'],
   },
   {
     category: 'State & Forms',
     icon: '🔄',
-    color: '#5b21b6',
+    color: '#006d8a',
     skills: ['Redux', 'Context API', 'Formik', 'React Hook Form', 'Zod'],
   },
   {
     category: 'UI Libraries',
     icon: '🎨',
-    color: '#9d174d',
+    color: '#003d52',
     skills: ['MUI', 'Shadcn UI', 'Storybook', 'Tailwind CSS'],
   },
   {
     category: 'DevOps & Tools',
     icon: '🛠️',
-    color: '#14532d',
+    color: '#003d2e',
     skills: ['Git', 'GitHub', 'GitLab', 'Docker', 'Turborepo', 'Vite'],
   },
   {
     category: 'Data & Analytics',
     icon: '📊',
-    color: '#78350f',
+    color: '#3a2a0a',
     skills: ['ApexCharts', 'Google Charts', 'Data Tables', 'SEO & Analytics'],
   },
 ]
 
 const proficiency = [
-  { name: 'React & Next.js',    level: 95, color: '#1d4ed8' },
-  { name: 'TypeScript',         level: 90, color: '#1d4ed8' },
-  { name: 'Tailwind CSS',       level: 92, color: '#0e7490' },
-  { name: 'Go / Node.js',       level: 85, color: '#0e7490' },
-  { name: 'State Management',   level: 88, color: '#5b21b6' },
-  { name: 'System Design',      level: 80, color: '#5b21b6' },
+  { name: 'React & Next.js',    level: 95, color: '#00d4ff' },
+  { name: 'TypeScript',         level: 90, color: '#00d4ff' },
+  { name: 'Tailwind CSS',       level: 92, color: '#0891b2' },
+  { name: 'Go / Node.js',       level: 85, color: '#0891b2' },
+  { name: 'State Management',   level: 88, color: '#006d8a' },
+  { name: 'System Design',      level: 80, color: '#006d8a' },
 ]
 
 function ProgressBar({ name, level, color, delay }: { name: string; level: number; color: string; delay: number }) {
@@ -84,7 +84,7 @@ function ProgressBar({ name, level, color, delay }: { name: string; level: numbe
       </div>
       <div
         className="w-full h-1.5 rounded-full overflow-hidden"
-        style={{ background: 'rgba(30, 41, 59, 0.4)' }}
+        style={{ background: 'rgba(0, 60, 80, 0.4)' }}
       >
         <div
           className="h-full rounded-full transition-all duration-1000"
@@ -121,7 +121,7 @@ export default function Skills() {
             Skills &{' '}
             <span
               className="bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(135deg, #1d4ed8, #5b21b6)' }}
+              style={{ backgroundImage: 'linear-gradient(135deg, #00d4ff, #006d8a)' }}
             >
               Expertise
             </span>
@@ -136,7 +136,7 @@ export default function Skills() {
                 className="p-6 rounded-xl border h-full transition-all duration-300 group cursor-default"
                 style={{
                   background: 'rgba(3, 5, 10, 0.85)',
-                  borderColor: 'rgba(30, 41, 59, 0.4)',
+                  borderColor: 'rgba(0, 60, 80, 0.4)',
                   backdropFilter: 'blur(8px)',
                 }}
                 onMouseEnter={e => {
@@ -145,7 +145,7 @@ export default function Skills() {
                   e.currentTarget.style.transform = 'translateY(-4px)'
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.borderColor = 'rgba(30, 41, 59, 0.4)'
+                  e.currentTarget.style.borderColor = 'rgba(0, 60, 80, 0.4)'
                   e.currentTarget.style.boxShadow = 'none'
                   e.currentTarget.style.transform = 'translateY(0)'
                 }}
@@ -175,7 +175,7 @@ export default function Skills() {
                       style={{
                         background: 'rgba(1, 2, 5, 0.9)',
                         border: `1px solid ${cat.color}20`,
-                        color: '#94a3b8',
+                        color: '#2a4a4a',
                       }}
                     >
                       {skill}
@@ -193,13 +193,13 @@ export default function Skills() {
             className="rounded-xl border p-8"
             style={{
               background: 'rgba(3, 5, 10, 0.85)',
-              borderColor: 'rgba(30, 41, 59, 0.4)',
+              borderColor: 'rgba(0, 60, 80, 0.4)',
             }}
           >
             <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
               <span
                 className="font-mono text-xs px-2.5 py-1 rounded"
-                style={{ background: 'rgba(59,130,246,0.1)', color: '#1d4ed8' }}
+                style={{ background: 'rgba(0,100,140,0.1)', color: '#00d4ff' }}
               >
                 proficiency
               </span>

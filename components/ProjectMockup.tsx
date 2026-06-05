@@ -30,14 +30,14 @@ function CryptoMockup() {
           <div style={{ color: 'rgba(148,163,184,0.6)', fontSize: '9px' }}>PORTFOLIO VALUE</div>
           <div
             className="text-xl font-bold mt-0.5"
-            style={{ color: '#60a5fa', textShadow: '0 0 12px rgba(96,165,250,0.4)' }}
+            style={{ color: '#00d4ff', textShadow: '0 0 12px rgba(96,165,250,0.4)' }}
           >
             $24,831.{String(Math.floor((Math.sin(tick * 0.04) + 1) * 50)).padStart(2, '0')}
           </div>
         </div>
         <div
           className="px-2 py-0.5 rounded text-xs"
-          style={{ background: 'rgba(74,222,128,0.1)', color: '#4ade80', border: '1px solid rgba(74,222,128,0.2)' }}
+          style={{ background: 'rgba(74,222,128,0.1)', color: '#006d5a', border: '1px solid rgba(74,222,128,0.2)' }}
         >
           +12.4%
         </div>
@@ -46,19 +46,19 @@ function CryptoMockup() {
       {/* Sparkline */}
       <div
         className="w-full rounded overflow-hidden relative"
-        style={{ height: 48, background: 'rgba(59,130,246,0.05)', border: '1px solid rgba(59,130,246,0.1)' }}
+        style={{ height: 48, background: 'rgba(0,100,140,0.06)', border: '1px solid rgba(0,100,140,0.1)' }}
       >
         <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
           <defs>
             <linearGradient id="spark-grad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+              <stop offset="0%" stopColor="#00d4ff" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#00d4ff" stopOpacity="0" />
             </linearGradient>
           </defs>
           <polyline
             points={chartData.map((v, i) => `${(i / (chartData.length - 1)) * 100},${100 - v}`).join(' ')}
             fill="none"
-            stroke="#3b82f6"
+            stroke="#00d4ff"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -72,25 +72,25 @@ function CryptoMockup() {
             cx={(((tick * 0.5) % 100))}
             cy={100 - (chartData[Math.floor((tick * 0.5 / 100) * (chartData.length - 1)) % chartData.length] ?? 70)}
             r="3"
-            fill="#60a5fa"
-            style={{ filter: 'drop-shadow(0 0 4px #3b82f6)' }}
+            fill="#00d4ff"
+            style={{ filter: 'drop-shadow(0 0 4px #00d4ff)' }}
           />
         </svg>
       </div>
 
       {/* Token list */}
       {[
-        { name: 'ETH', val: '4.82', usd: '$14,211', change: '+8.2%', color: '#a78bfa' },
-        { name: 'BTC', val: '0.21', usd: '$8,920', change: '+4.1%', color: '#facc15' },
+        { name: 'ETH', val: '4.82', usd: '$14,211', change: '+8.2%', color: '#0891b2' },
+        { name: 'BTC', val: '0.21', usd: '$8,920', change: '+4.1%', color: '#005a6e' },
       ].map((token) => (
-        <div key={token.name} className="flex items-center justify-between py-1.5 border-b" style={{ borderColor: 'rgba(59,130,246,0.06)' }}>
+        <div key={token.name} className="flex items-center justify-between py-1.5 border-b" style={{ borderColor: 'rgba(0,100,140,0.06)' }}>
           <div className="flex items-center gap-2">
             <div className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold" style={{ background: token.color + '22', color: token.color, fontSize: '8px' }}>{token.name[0]}</div>
-            <span style={{ color: '#94a3b8', fontSize: '10px' }}>{token.name}</span>
+            <span style={{ color: '#2a4a4a', fontSize: '10px' }}>{token.name}</span>
           </div>
           <div className="text-right">
             <div style={{ color: '#e2e8f0', fontSize: '10px' }}>{token.usd}</div>
-            <div style={{ color: '#4ade80', fontSize: '9px' }}>{token.change}</div>
+            <div style={{ color: '#006d5a', fontSize: '9px' }}>{token.change}</div>
           </div>
         </div>
       ))}
@@ -116,11 +116,11 @@ function DashboardMockup() {
       {/* Stats row */}
       <div className="grid grid-cols-3 gap-2">
         {[
-          { label: 'Users', val: '12,481', color: '#3b82f6' },
+          { label: 'Users', val: '12,481', color: '#00d4ff' },
           { label: 'Vol.', val: '$2.4M', color: '#22d3ee' },
-          { label: 'TXNs', val: '8,204', color: '#a78bfa' },
+          { label: 'TXNs', val: '8,204', color: '#0891b2' },
         ].map((s) => (
-          <div key={s.label} className="rounded p-2 text-center" style={{ background: 'rgba(59,130,246,0.06)', border: '1px solid rgba(59,130,246,0.1)' }}>
+          <div key={s.label} className="rounded p-2 text-center" style={{ background: 'rgba(0,100,140,0.06)', border: '1px solid rgba(0,100,140,0.1)' }}>
             <div style={{ color: s.color, fontWeight: 700, fontSize: '11px' }}>{s.val}</div>
             <div style={{ color: 'rgba(148,163,184,0.5)', fontSize: '8px' }}>{s.label}</div>
           </div>
@@ -132,8 +132,8 @@ function DashboardMockup() {
         {bars.map((h, i) => (
           <div key={i} className="flex-1 rounded-sm transition-all duration-300" style={{
             height: `${h}%`,
-            background: `linear-gradient(to top, #3b82f6${Math.abs(Math.sin((tick * 0.03 + i) * 0.5)) > 0.5 ? 'dd' : '66'}, #06b6d4${Math.abs(Math.sin((tick * 0.03 + i) * 0.5)) > 0.5 ? '88' : '33'})`,
-            boxShadow: Math.abs(Math.sin((tick * 0.03 + i) * 0.5)) > 0.5 ? '0 0 8px rgba(59,130,246,0.5)' : 'none',
+            background: `linear-gradient(to top, #00d4ff${Math.abs(Math.sin((tick * 0.03 + i) * 0.5)) > 0.5 ? 'dd' : '66'}, #06b6d4${Math.abs(Math.sin((tick * 0.03 + i) * 0.5)) > 0.5 ? '88' : '33'})`,
+            boxShadow: Math.abs(Math.sin((tick * 0.03 + i) * 0.5)) > 0.5 ? '0 0 8px rgba(0,180,216,0.45)' : 'none',
           }} />
         ))}
       </div>
@@ -143,7 +143,7 @@ function DashboardMockup() {
         <span style={{ color: 'rgba(148,163,184,0.4)', fontSize: '9px' }}>KYC Verified</span>
         <div className="flex gap-1">
           {[1,2,3,4].map(i => (
-            <div key={i} className="w-1.5 h-1.5 rounded-full" style={{ background: i <= 3 ? '#4ade80' : 'rgba(59,130,246,0.2)' }} />
+            <div key={i} className="w-1.5 h-1.5 rounded-full" style={{ background: i <= 3 ? '#006d5a' : 'rgba(0,180,216,0.15)' }} />
           ))}
         </div>
       </div>
@@ -176,15 +176,15 @@ function MapMockup() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: 'linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(0,180,216,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,180,216,0.04) 1px, transparent 1px)',
           backgroundSize: '20px 20px',
         }}
       />
       {/* Road lines */}
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0,50 Q30,30 60,50 T100,50" stroke="rgba(59,130,246,0.12)" strokeWidth="0.8" fill="none" />
-        <path d="M30,0 Q35,50 40,100" stroke="rgba(59,130,246,0.08)" strokeWidth="0.5" fill="none" />
-        <path d="M70,0 Q65,50 60,100" stroke="rgba(59,130,246,0.08)" strokeWidth="0.5" fill="none" />
+        <path d="M0,50 Q30,30 60,50 T100,50" stroke="rgba(0,100,140,0.12)" strokeWidth="0.8" fill="none" />
+        <path d="M30,0 Q35,50 40,100" stroke="rgba(0,180,216,0.08)" strokeWidth="0.5" fill="none" />
+        <path d="M70,0 Q65,50 60,100" stroke="rgba(0,180,216,0.08)" strokeWidth="0.5" fill="none" />
       </svg>
 
       {/* Station pins */}
@@ -212,7 +212,7 @@ function MapMockup() {
           <div
             className="w-4 h-4 rounded-full flex items-center justify-center"
             style={{
-              background: pin.active ? '#4ade80' : 'rgba(148,163,184,0.3)',
+              background: pin.active ? '#006d5a' : 'rgba(148,163,184,0.3)',
               boxShadow: pin.active ? '0 0 8px rgba(74,222,128,0.6)' : 'none',
               fontSize: '6px',
               color: '#050810',
@@ -223,7 +223,7 @@ function MapMockup() {
           </div>
           <div
             className="mt-0.5 px-1 rounded font-mono"
-            style={{ fontSize: '6px', background: 'rgba(5,8,16,0.8)', color: pin.active ? '#4ade80' : '#475569' }}
+            style={{ fontSize: '6px', background: 'rgba(5,8,16,0.8)', color: pin.active ? '#006d5a' : '#1a3a3a' }}
           >
             {pin.label}
           </div>
@@ -233,12 +233,12 @@ function MapMockup() {
       {/* Panel overlay bottom */}
       <div
         className="absolute bottom-0 left-0 right-0 p-2 font-mono"
-        style={{ background: 'rgba(5,8,16,0.85)', borderTop: '1px solid rgba(59,130,246,0.1)' }}
+        style={{ background: 'rgba(5,8,16,0.85)', borderTop: '1px solid rgba(0,100,140,0.1)' }}
       >
         <div className="flex justify-between items-center">
-          <span style={{ color: '#4ade80', fontSize: '9px' }}>● 3 Active</span>
-          <span style={{ color: '#475569', fontSize: '9px' }}>2 Offline</span>
-          <span style={{ color: '#60a5fa', fontSize: '9px' }}>12 Users</span>
+          <span style={{ color: '#006d5a', fontSize: '9px' }}>● 3 Active</span>
+          <span style={{ color: '#1a3a3a', fontSize: '9px' }}>2 Offline</span>
+          <span style={{ color: '#00d4ff', fontSize: '9px' }}>12 Users</span>
         </div>
       </div>
     </div>
@@ -261,7 +261,7 @@ function FormMockup() {
   return (
     <div className="w-full h-full p-4 flex flex-col gap-2.5 font-mono text-xs">
       {/* Page title */}
-      <div style={{ color: '#60a5fa', fontWeight: 700, fontSize: '11px' }}>Funding Application</div>
+      <div style={{ color: '#00d4ff', fontWeight: 700, fontSize: '11px' }}>Funding Application</div>
 
       {/* Fields */}
       {[
@@ -275,7 +275,7 @@ function FormMockup() {
             className="w-full rounded px-2 py-1"
             style={{
               background: 'rgba(5,8,16,0.6)',
-              border: '1px solid rgba(59,130,246,0.15)',
+              border: '1px solid rgba(0,100,140,0.15)',
               color: '#e2e8f0',
               fontSize: '10px',
             }}
@@ -292,15 +292,15 @@ function FormMockup() {
           className="w-full rounded px-2 py-1"
           style={{
             background: 'rgba(5,8,16,0.6)',
-            border: '1px solid rgba(59,130,246,0.4)',
-            boxShadow: '0 0 8px rgba(59,130,246,0.1)',
+            border: '1px solid rgba(0,180,216,0.35)',
+            boxShadow: '0 0 8px rgba(0,100,140,0.1)',
             fontSize: '10px',
-            color: '#94a3b8',
+            color: '#2a4a4a',
             minHeight: 28,
           }}
         >
           <span>Innovative SaaS platform</span>
-          <span style={{ opacity: cursorVisible ? 1 : 0, color: '#60a5fa' }}>|</span>
+          <span style={{ opacity: cursorVisible ? 1 : 0, color: '#00d4ff' }}>|</span>
         </div>
       </div>
 
@@ -308,11 +308,11 @@ function FormMockup() {
       <div
         className="w-full rounded py-1.5 text-center mt-auto"
         style={{
-          background: 'linear-gradient(135deg, #2563eb, #7c3aed)',
+          background: 'linear-gradient(135deg, #0891b2, #0891b2)',
           color: 'white',
           fontSize: '10px',
           fontWeight: 700,
-          boxShadow: '0 0 12px rgba(59,130,246,0.3)',
+          boxShadow: '0 0 12px rgba(0,180,216,0.25)',
         }}
       >
         Submit Application →
@@ -357,7 +357,7 @@ export default function ProjectMockup({ type, accentColor }: Props) {
         <span className="w-2 h-2 rounded-full" style={{ background: 'rgba(74,222,128,0.6)' }} />
         <div
           className="ml-2 flex-1 h-3 rounded-sm font-mono flex items-center px-2"
-          style={{ background: 'rgba(59,130,246,0.05)', fontSize: '7px', color: 'rgba(148,163,184,0.3)' }}
+          style={{ background: 'rgba(0,100,140,0.06)', fontSize: '7px', color: 'rgba(148,163,184,0.3)' }}
         >
           localhost:3000
         </div>

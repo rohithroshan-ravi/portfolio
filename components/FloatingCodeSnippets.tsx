@@ -116,14 +116,14 @@ export default function FloatingCodeSnippets() {
             className="rounded-lg overflow-hidden border"
             style={{
               background: 'rgba(10, 15, 30, 0.7)',
-              borderColor: 'rgba(59, 130, 246, 0.12)',
+              borderColor: 'rgba(0, 100, 140, 0.12)',
               backdropFilter: 'blur(4px)',
             }}
           >
             {/* Terminal tab bar */}
             <div
               className="flex items-center gap-1.5 px-3 py-2 border-b"
-              style={{ borderColor: 'rgba(59, 130, 246, 0.1)', background: 'rgba(5, 8, 16, 0.5)' }}
+              style={{ borderColor: 'rgba(0, 100, 140, 0.1)', background: 'rgba(5, 8, 16, 0.5)' }}
             >
               <span className="w-2 h-2 rounded-full bg-red-500/60" />
               <span className="w-2 h-2 rounded-full bg-yellow-500/60" />

@@ -36,10 +36,10 @@ function CountUp({ target, suffix = '' }: { target: number; suffix?: string }) {
 }
 
 const stats = [
-  { value: 3,   suffix: '+', label: 'Years Experience',     color: '#1d4ed8', glow: 'rgba(59,130,246,0.2)' },
-  { value: 20,  suffix: '+', label: 'Projects Shipped',     color: '#0e7490', glow: 'rgba(6,182,212,0.2)'  },
-  { value: 10,  suffix: '+', label: 'Technologies Mastered',color: '#4c1d95', glow: 'rgba(124,58,237,0.2)' },
-  { value: 100, suffix: '%', label: 'Committed to Quality', color: '#1d4ed8', glow: 'rgba(59,130,246,0.2)' },
+  { value: 3,   suffix: '+', label: 'Years Experience',     color: '#00d4ff', glow: 'rgba(0,180,216,0.15)' },
+  { value: 20,  suffix: '+', label: 'Projects Shipped',     color: '#0891b2', glow: 'rgba(8,145,178,0.15)'  },
+  { value: 10,  suffix: '+', label: 'Technologies Mastered',color: '#006d8a', glow: 'rgba(0,100,140,0.15)' },
+  { value: 100, suffix: '%', label: 'Committed to Quality', color: '#00d4ff', glow: 'rgba(0,180,216,0.15)' },
 ]
 
 export default function About() {
@@ -49,14 +49,14 @@ export default function About() {
 
         {/* Section header */}
         <ScrollReveal className="text-center mb-20">
-          <p className="font-mono text-xs text-blue-900 tracking-widest uppercase mb-3">
+          <p className="font-mono text-xs tracking-widest uppercase mb-3" style={{ color: '#003d52' }}>
             &gt; about.md
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
             <span className="text-white">About</span>{' '}
             <span
               className="bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(135deg, #2563eb, #0891b2)' }}
+              style={{ backgroundImage: 'linear-gradient(135deg, #0891b2, #00d4ff)' }}
             >
               Me
             </span>
@@ -94,8 +94,8 @@ export default function About() {
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs border font-mono"
                   style={{
                     background: 'rgba(1, 2, 5, 0.95)',
-                    borderColor: 'rgba(30, 58, 138, 0.3)',
-                    color: '#475569',
+                    borderColor: 'rgba(0, 100, 140, 0.3)',
+                    color: '#1a3a3a',
                   }}
                 >
                   <span>{icon}</span>
@@ -114,7 +114,7 @@ export default function About() {
                 className="p-5 rounded-xl border text-center cursor-default transition-all duration-300"
                 style={{
                   background: 'rgba(1, 2, 5, 0.95)',
-                  borderColor: 'rgba(30, 41, 59, 0.8)',
+                  borderColor: 'rgba(0, 60, 80, 0.8)',
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.borderColor = stat.color + '33'
@@ -122,7 +122,7 @@ export default function About() {
                   e.currentTarget.style.transform = 'translateY(-3px)'
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.borderColor = 'rgba(30, 41, 59, 0.8)'
+                  e.currentTarget.style.borderColor = 'rgba(0, 60, 80, 0.8)'
                   e.currentTarget.style.boxShadow = 'none'
                   e.currentTarget.style.transform = 'translateY(0)'
                 }}

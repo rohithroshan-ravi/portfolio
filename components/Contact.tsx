@@ -8,7 +8,7 @@ const socialLinks = [
     label: 'Email',
     value: 'rohithroshan374@gmail.com',
     href: 'mailto:rohithroshan374@gmail.com',
-    color: '#3b82f6',
+    color: '#00d4ff',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -30,7 +30,7 @@ const socialLinks = [
     label: 'GitHub',
     value: 'rohithroshan-ravi',
     href: 'https://github.com/rohithroshan-ravi',
-    color: '#a78bfa',
+    color: '#0891b2',
     icon: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -66,8 +66,8 @@ function GlowInput({
           className="w-full px-4 py-3 rounded-lg text-white text-sm placeholder-slate-600 outline-none transition-all duration-300 font-mono"
           style={{
             background: 'rgba(1, 2, 5, 0.95)',
-            border: `1px solid ${focused ? 'rgba(59, 130, 246, 0.5)' : 'rgba(30, 41, 59, 0.5)'}`,
-            boxShadow: focused ? '0 0 0 3px rgba(30, 41, 59, 0.4), 0 0 16px rgba(30, 41, 59, 0.5)' : 'none',
+            border: `1px solid ${focused ? 'rgba(0, 180, 216, 0.45)' : 'rgba(0, 60, 80, 0.5)'}`,
+            boxShadow: focused ? '0 0 0 3px rgba(0, 60, 80, 0.4), 0 0 16px rgba(0, 60, 80, 0.5)' : 'none',
           }}
         />
       </div>
@@ -101,8 +101,8 @@ function GlowTextarea({
         className="w-full px-4 py-3 rounded-lg text-white text-sm placeholder-slate-600 outline-none transition-all duration-300 font-mono resize-none"
         style={{
           background: 'rgba(1, 2, 5, 0.95)',
-          border: `1px solid ${focused ? 'rgba(59, 130, 246, 0.5)' : 'rgba(30, 41, 59, 0.5)'}`,
-          boxShadow: focused ? '0 0 0 3px rgba(30, 41, 59, 0.4), 0 0 16px rgba(30, 41, 59, 0.5)' : 'none',
+          border: `1px solid ${focused ? 'rgba(0, 180, 216, 0.45)' : 'rgba(0, 60, 80, 0.5)'}`,
+          boxShadow: focused ? '0 0 0 3px rgba(0, 60, 80, 0.4), 0 0 16px rgba(0, 60, 80, 0.5)' : 'none',
         }}
       />
     </div>
@@ -142,14 +142,14 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
         <ScrollReveal className="text-center mb-20">
-          <p className="font-mono text-sm text-blue-500/60 tracking-widest uppercase mb-3">
+          <p className="font-mono text-sm tracking-widest uppercase mb-3" style={{ color: 'rgba(0,180,216,0.5)' }}>
             &gt; contact --open
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Get In{' '}
             <span
               className="bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(135deg, #3b82f6, #8b5cf6)' }}
+              style={{ backgroundImage: 'linear-gradient(135deg, #00d4ff, #0891b2)' }}
             >
               Touch
             </span>
@@ -175,8 +175,8 @@ export default function Contact() {
                   className="flex items-center gap-4 p-4 rounded-xl border transition-all duration-300 group"
                   style={{
                     background: 'rgba(3, 5, 10, 0.85)',
-                    borderColor: 'rgba(30, 41, 59, 0.5)',
-                    color: '#94a3b8',
+                    borderColor: 'rgba(0, 60, 80, 0.5)',
+                    color: '#2a4a4a',
                   }}
                   onMouseEnter={e => {
                     e.currentTarget.style.borderColor = link.color + '44'
@@ -185,10 +185,10 @@ export default function Contact() {
                     e.currentTarget.style.color = link.color
                   }}
                   onMouseLeave={e => {
-                    e.currentTarget.style.borderColor = 'rgba(30, 41, 59, 0.5)'
+                    e.currentTarget.style.borderColor = 'rgba(0, 60, 80, 0.5)'
                     e.currentTarget.style.boxShadow = 'none'
                     e.currentTarget.style.transform = 'translateX(0)'
-                    e.currentTarget.style.color = '#94a3b8'
+                    e.currentTarget.style.color = '#2a4a4a'
                   }}
                 >
                   <div
@@ -235,17 +235,17 @@ export default function Contact() {
               className="rounded-xl border p-7"
               style={{
                 background: 'rgba(3, 5, 10, 0.9)',
-                borderColor: 'rgba(30, 41, 59, 0.5)',
+                borderColor: 'rgba(0, 60, 80, 0.5)',
                 backdropFilter: 'blur(12px)',
               }}
             >
-              <p className="font-mono text-xs text-blue-500/60 mb-6">$ send_message --to rohith</p>
+              <p className="font-mono text-xs mb-6" style={{ color: 'rgba(0,180,216,0.4)' }}>$ send_message --to rohith</p>
 
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center py-12 gap-4 text-center">
                   <div
                     className="w-12 h-12 rounded-full flex items-center justify-center text-xl"
-                    style={{ background: 'rgba(59, 130, 246, 0.15)', boxShadow: '0 0 20px rgba(30, 58, 138, 0.15)' }}
+                    style={{ background: 'rgba(0, 100, 140, 0.15)', boxShadow: '0 0 20px rgba(0, 100, 140, 0.15)' }}
                   >
                     ✓
                   </div>
@@ -267,16 +267,16 @@ export default function Contact() {
                     className="w-full py-3.5 rounded-lg font-semibold text-white transition-all duration-300 relative overflow-hidden"
                     style={{
                       background: isSending
-                        ? 'rgba(59, 130, 246, 0.5)'
-                        : 'linear-gradient(135deg, #2563eb, #7c3aed)',
-                      boxShadow: isSending ? 'none' : '0 0 0 rgba(59, 130, 246, 0)',
+                        ? 'rgba(0, 180, 216, 0.35)'
+                        : 'linear-gradient(135deg, #0369a1, #0891b2)',
+                      boxShadow: isSending ? 'none' : 'none',
                       cursor: isSending ? 'wait' : 'pointer',
                     }}
                     onMouseEnter={e => {
-                      if (!isSending) e.currentTarget.style.boxShadow = '0 0 30px rgba(59, 130, 246, 0.5), 0 0 60px rgba(139, 92, 246, 0.2)'
+                      if (!isSending) e.currentTarget.style.boxShadow = '0 0 28px rgba(0, 180, 216, 0.35), 0 0 56px rgba(0, 100, 140, 0.15)'
                     }}
                     onMouseLeave={e => {
-                      e.currentTarget.style.boxShadow = '0 0 0 rgba(59, 130, 246, 0)'
+                      e.currentTarget.style.boxShadow = 'none'
                     }}
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">

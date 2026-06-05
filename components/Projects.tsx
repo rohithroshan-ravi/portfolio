@@ -12,7 +12,7 @@ const projects = [
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Go', 'Echo'],
     features: ['Portfolio Dashboard', 'Token Swapping', 'Activity Tracking', 'Multi-network Support'],
     link: 'https://github.com/rohithroshan-ravi/noah-wallet',
-    accentColor: '#1d4ed8',
+    accentColor: '#00d4ff',
     tag: 'Web3',
     mockup: 'crypto' as const,
   },
@@ -22,7 +22,7 @@ const projects = [
     description: 'End-to-end onramp widget and admin/partner panel built in a Turborepo monorepo. Includes KYC flow, Apple Pay integration, and a complete design system with 60+ components.',
     technologies: ['Next.js', 'TypeScript', 'Turborepo', 'Go', 'Docker'],
     features: ['KYC Integration', 'Payment Gateways', 'Design System', 'Role-based Access'],
-    accentColor: '#6d28d9',
+    accentColor: '#006d8a',
     tag: 'Fintech',
     mockup: 'dashboard' as const,
   },
@@ -32,7 +32,7 @@ const projects = [
     description: 'Comprehensive admin panel for managing EV charging infrastructure across multiple stations. Real-time map visualization with optimized pin renders and role-based authorization.',
     technologies: ['React', 'Redux', 'Google Maps API', 'Material-UI'],
     features: ['Station Management', 'Real-time Analytics', 'Map Visualization', 'Role Auth'],
-    accentColor: '#0e7490',
+    accentColor: '#0891b2',
     tag: 'Enterprise',
     mockup: 'map' as const,
   },
@@ -42,7 +42,7 @@ const projects = [
     description: 'Server-side rendered user and admin panels for funding operations. SEO-optimized with canonical tags, sitemap, and Google Analytics integration. Built with Next.js + MUI.',
     technologies: ['Next.js', 'SSR', 'Material-UI', 'Formik', 'Google Analytics'],
     features: ['User Dashboard', 'Admin Controls', 'SEO Optimized', 'Responsive Design'],
-    accentColor: '#92400e',
+    accentColor: '#3a2a0a',
     tag: 'SaaS',
     mockup: 'form' as const,
   },
@@ -57,7 +57,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         className="group relative rounded-xl border overflow-hidden cursor-default transition-all duration-400 h-full flex flex-col"
         style={{
           background: 'rgba(3, 5, 10, 0.9)',
-          borderColor: hovered ? project.accentColor + '40' : 'rgba(30, 41, 59, 0.5)',
+          borderColor: hovered ? project.accentColor + '40' : 'rgba(0, 60, 80, 0.5)',
           boxShadow: hovered ? `0 0 40px ${project.accentColor}18, 0 16px 48px rgba(0,0,0,0.3)` : 'none',
           transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
           backdropFilter: 'blur(12px)',
@@ -115,11 +115,11 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
                 style={{
                   background: 'rgba(1, 2, 5, 0.9)',
                   borderColor: 'rgba(59, 130, 246, 0.15)',
-                  color: '#1d4ed8',
+                  color: '#00d4ff',
                 }}
                 onMouseEnter={e => {
-                  e.currentTarget.style.borderColor = '#1d4ed8'
-                  e.currentTarget.style.background = 'rgba(30, 41, 59, 0.5)'
+                  e.currentTarget.style.borderColor = '#00d4ff'
+                  e.currentTarget.style.background = 'rgba(0, 60, 80, 0.5)'
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.15)'
@@ -133,11 +133,11 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
               </a>
             )}
           </div>
-          <p className="text-slate-400 text-sm leading-relaxed">{project.description}</p>
+          <p className="text-xs text-sm leading-relaxed">{project.description}</p>
         </div>
 
         {/* Divider */}
-        <div className="mx-6 h-px" style={{ background: 'rgba(30, 41, 59, 0.3)' }} />
+        <div className="mx-6 h-px" style={{ background: 'rgba(0, 60, 80, 0.3)' }} />
 
         {/* Features */}
         <div className="px-6 py-4 flex-1">
@@ -149,7 +149,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           </p>
           <ul className="space-y-1.5">
             {project.features.map((f, i) => (
-              <li key={i} className="flex items-center gap-2 text-slate-400 text-sm">
+              <li key={i} className="flex items-center gap-2 text-xs text-sm">
                 <span
                   className="w-1.5 h-1.5 rounded-full shrink-0"
                   style={{ background: project.accentColor, boxShadow: `0 0 4px ${project.accentColor}` }}
@@ -169,7 +169,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
                 className="font-mono text-xs px-2 py-0.5 rounded border"
                 style={{
                   background: 'rgba(1, 2, 5, 0.9)',
-                  borderColor: 'rgba(30, 41, 59, 0.5)',
+                  borderColor: 'rgba(0, 60, 80, 0.5)',
                   color: '#64748b',
                 }}
               >
@@ -196,14 +196,14 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <ScrollReveal className="text-center mb-20">
-          <p className="font-mono text-sm text-blue-500/60 tracking-widest uppercase mb-3">
+          <p className="font-mono text-sm tracking-widest uppercase mb-3" style={{ color: 'rgba(0,180,216,0.5)' }}>
             &gt; ls -la ./projects
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
             Featured{' '}
             <span
               className="bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(135deg, #1d4ed8, #0e7490)' }}
+              style={{ backgroundImage: 'linear-gradient(135deg, #00d4ff, #0891b2)' }}
             >
               Projects
             </span>
@@ -226,11 +226,11 @@ export default function Projects() {
             style={{
               background: 'rgba(3, 5, 10, 0.85)',
               borderColor: 'rgba(59, 130, 246, 0.15)',
-              color: '#1d4ed8',
+              color: '#00d4ff',
             }}
             onMouseEnter={e => {
               e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.4)'
-              e.currentTarget.style.background = 'rgba(30, 41, 59, 0.3)'
+              e.currentTarget.style.background = 'rgba(0, 60, 80, 0.3)'
               e.currentTarget.style.boxShadow = '0 0 24px rgba(59, 130, 246, 0.15)'
               e.currentTarget.style.transform = 'translateY(-2px)'
             }}
